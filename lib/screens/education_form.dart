@@ -65,10 +65,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
             children: [
               const Text(
                 "Education Details",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 20),
@@ -121,9 +118,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                   border: OutlineInputBorder(),
                   suffixIcon: Icon(Icons.calendar_today),
                 ),
-                controller: TextEditingController(
-                  text: formatDate(_started),
-                ),
+                controller: TextEditingController(text: formatDate(_started)),
                 onTap: () => selectDate(true),
                 validator: (value) {
                   if (_started == null) {
@@ -143,9 +138,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                   border: OutlineInputBorder(),
                   suffixIcon: Icon(Icons.calendar_today),
                 ),
-                controller: TextEditingController(
-                  text: formatDate(_ended),
-                ),
+                controller: TextEditingController(text: formatDate(_ended)),
                 onTap: () => selectDate(false),
                 validator: (value) {
                   if (_ended != null &&
@@ -163,8 +156,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                        const Color(0xFFF1B4AF),
+                    backgroundColor: const Color(0xFFF1B4AF),
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.all(16),
                   ),
@@ -174,9 +166,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: const Text(
-                              "Education successfully added!",
-                            ),
+                            title: const Text("Education successfully added!"),
                             content: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.start,

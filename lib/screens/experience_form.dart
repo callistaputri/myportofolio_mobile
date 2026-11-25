@@ -5,8 +5,7 @@ class ExperienceFormPage extends StatefulWidget {
   const ExperienceFormPage({super.key});
 
   @override
-  State<ExperienceFormPage> createState() =>
-      _ExperienceFormPageState();
+  State<ExperienceFormPage> createState() => _ExperienceFormPageState();
 }
 
 class _ExperienceFormPageState extends State<ExperienceFormPage> {
@@ -30,9 +29,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('Add Experience Form'),
-        ),
+        title: const Center(child: Text('Add Experience Form')),
         backgroundColor: const Color(0xFFF1B4AF),
         foregroundColor: Colors.white,
       ),
@@ -106,10 +103,12 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   ),
                   initialValue: _category,
                   items: _categories
-                      .map((category) => DropdownMenuItem(
-                            value: category,
-                            child: Text(category),
-                          ))
+                      .map(
+                        (category) => DropdownMenuItem(
+                          value: category,
+                          child: Text(category),
+                        ),
+                      )
                       .toList(),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -145,8 +144,9 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor:
-                          WidgetStateProperty.all(Color(0xFFF1B4AF)),
+                      backgroundColor: WidgetStateProperty.all(
+                        Color(0xFFF1B4AF),
+                      ),
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
